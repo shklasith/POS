@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.*, com.mycompany.possystem.model.SaleItem" %>
+<%@ page import="java.util.*, com.mycompany.pos.model.SaleItem" %>
 <%
     double totalAmount = (Double) request.getAttribute("totalAmount");
     int saleId = (Integer) request.getAttribute("saleId");

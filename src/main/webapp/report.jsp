@@ -1,6 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.*, com.mycompany.possystem.model.Sale" %>
+<%@ page import="java.util.*, com.mycompany.pos.model.Sale" %>
 <%
     List<Sale> salesList = (List<Sale>) request.getAttribute("salesList");
     double totalRevenue = (Double) request.getAttribute("totalRevenue");

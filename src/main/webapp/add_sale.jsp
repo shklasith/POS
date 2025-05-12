@@ -1,6 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.*, com.mycompany.possystem.model.Product" %>
+<%@ page import="java.util.*, com.mycompany.pos.model.Product" %>
 <%
     List<Product> products = (List<Product>) request.getAttribute("products");
 %>
