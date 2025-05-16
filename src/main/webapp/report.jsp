@@ -1,6 +1,11 @@
 
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*, com.mycompany.pos.model.Sale" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.*, com.mycompany.possystem.model.Sale" %>
+
 <%
     List<Sale> salesList = (List<Sale>) request.getAttribute("salesList");
     double totalRevenue = (Double) request.getAttribute("totalRevenue");
@@ -88,6 +93,7 @@
 
 <table>
     <thead>
+
     <tr>
         <th>Sale ID</th>
         <th>Sale Date</th>
@@ -108,6 +114,28 @@
         <td colspan="3">No sales found for this period.</td>
     </tr>
     <% } %>
+
+        <tr>
+            <th>Sale ID</th>
+            <th>Sale Date</th>
+            <th>Total Amount (Rs)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (salesList != null && !salesList.isEmpty()) {
+            for (Sale s : salesList) { %>
+                <tr>
+                    <td><%= s.getId() %></td>
+                    <td><%= s.getSaleDate() %></td>
+                    <td><%= String.format("%.2f", s.getTotalAmount()) %></td>
+                </tr>
+        <%  }
+        } else { %>
+            <tr>
+                <td colspan="3">No sales found for this period.</td>
+            </tr>
+        <% } %>
+
     </tbody>
 </table>
 
@@ -120,4 +148,8 @@
 </div>
 
 </body>
+
 </html>
+
+</html>
+

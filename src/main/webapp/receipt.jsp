@@ -1,5 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@ page import="java.util.*, com.mycompany.pos.model.SaleItem" %>
+
+<%@ page import="java.util.*, com.mycompany.possystem.model.SaleItem" %>
+
 <%
     double totalAmount = (Double) request.getAttribute("totalAmount");
     int saleId = (Integer) request.getAttribute("saleId");
@@ -85,6 +89,7 @@
         <tbody>
         <% if (cart != null) {
             for (SaleItem item : cart) { %>
+
         <tr>
             <td><%= item.getProductId() %></td>
             <td><%= item.getQuantity() %></td>
@@ -95,6 +100,18 @@
         <tr>
             <td colspan="3">No items found.</td>
         </tr>
+
+            <tr>
+                <td><%= item.getProductId() %></td>
+                <td><%= item.getQuantity() %></td>
+                <td><%= String.format("%.2f", item.getSubtotal()) %></td>
+            </tr>
+        <%  }
+        } else { %>
+            <tr>
+                <td colspan="3">No items found.</td>
+            </tr>
+
         <% } %>
         </tbody>
         <tfoot>
@@ -113,4 +130,8 @@
 </div>
 
 </body>
+
 </html>
+
+</html>
+
