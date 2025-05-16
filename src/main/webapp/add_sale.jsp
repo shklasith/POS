@@ -1,3 +1,6 @@
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.*, com.mycompany.pos.model.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*, com.mycompany.possystem.model.Product" %>
 <%
@@ -77,9 +80,15 @@
     <select name="productId" required>
         <option value="" disabled selected>-- Choose a product --</option>
         <% for (Product p : products) { %>
+
+        <option value="<%= p.getId() %>">
+            <%= p.getName() %> - Rs. <%= p.getPrice() %> (Available: <%= p.getQuantity() %>)
+        </option>
+
             <option value="<%= p.getId() %>">
                 <%= p.getName() %> - Rs. <%= p.getPrice() %> (Available: <%= p.getQuantity() %>)
             </option>
+
         <% } %>
     </select>
 
@@ -95,4 +104,8 @@
 </div>
 
 </body>
+
 </html>
+
+</html>
+
