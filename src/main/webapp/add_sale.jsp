@@ -70,7 +70,7 @@
 </head>
 <body>
 
-<h1 align="center">🛒 Add Item to Cart</h1>
+<h1>🛒 Add Item to Cart</h1>
 
 <form action="sales" method="post">
     <label for="productId">Select Product:</label>
