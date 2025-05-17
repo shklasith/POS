@@ -1,4 +1,28 @@
--- Create database if it doesn't exist
+# POS System - Java Web Application
+
+![POS System Screenshot](screenshot.png) <!-- Add a screenshot if available -->
+
+A Point of Sale (POS) system built with Java EE/Jakarta EE, MySQL, and Maven.
+
+## Features
+- Product inventory management
+- Sales processing
+- Sales history tracking
+- MySQL database integration
+- RESTful API endpoints (Optional)
+- User authentication (Optional)
+
+## Technologies Used
+- **Backend**: Java EE/Jakarta EE 8+
+- **Frontend**: JSP, JSTL, HTML5, CSS3, JavaScript
+- **Database**: MySQL
+- **Build Tool**: Maven
+- **Application Server**: Tomcat 9+/Payara/Jetty
+
+## Database Schema
+The system uses the following MySQL database structure:
+
+```sql
 CREATE DATABASE IF NOT EXISTS pos_system;
 USE pos_system;
 
@@ -34,4 +58,3 @@ CREATE TABLE users (
     username VARCHAR(50),
     password VARCHAR(255)
 );
-
