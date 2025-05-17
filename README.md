@@ -1,6 +1,6 @@
 # POS System - Java Web Application
 
-![POS System Screenshot](screen![Uploading WhatsApp Image 2025-05-17 at 23.18.41.jpeg…]()
+![POS System Screenshot](screen![WhatsApp Image 2025-05-17 at 23 18 41](https://github.com/user-attachments/assets/b31f4abb-a970-451e-9959-11728143650c)
 shot.png) 
 
 A Point of Sale (POS) system built with Java EE/Jakarta EE, MySQL, and Maven.
